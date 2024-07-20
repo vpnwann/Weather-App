@@ -1,0 +1,19 @@
+<div className="p-4">
+      <input
+      
+        type="text"
+        value={location}
+        onChange={handleLocationChange}
+        placeholder="Enter location"
+        className="p-2 border text-black rounded mb-4"
+      />
+      {weather ? (
+        <div>
+          <h2 className="text-2xl">{weather.name}</h2>
+          <p>Temperature: {weather.main.temp} °C</p>
+          <p>Weather: {weather.weather[0].description}</p>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
